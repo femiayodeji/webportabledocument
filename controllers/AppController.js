@@ -4,9 +4,6 @@ const options = {
   format: "A4",
   orientation: "portrait",
   border: "10mm",
-  "zoomFactor": "0.25",
-  "height": "297mm",
-  "width": "210mm",
 };
 
 exports.convertToPdf = (req, res) => {
