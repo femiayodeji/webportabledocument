@@ -1,7 +1,7 @@
 const pdf = require('html-pdf');
 
 const options = {
-  format: "A4",
+  format: "A3",
   orientation: "portrait",
   border: "10mm",
 };
