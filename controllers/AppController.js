@@ -4,7 +4,7 @@ const options = {
   format: "A3",
   orientation: "portrait",
   border: "10mm",
-  font: "arial"
+  "zoomFactor": "1",
 };
 
 exports.convertToPdf = (req, res) => {
