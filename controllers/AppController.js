@@ -4,6 +4,7 @@ const options = {
   format: "A3",
   orientation: "portrait",
   border: "10mm",
+  font: "arial"
 };
 
 exports.convertToPdf = (req, res) => {
@@ -16,8 +17,8 @@ exports.convertToPdf = (req, res) => {
 
   const html = htmlBuffer.toString();
   pdf.create(html,options).toStream(function(error, stream){
-    if(error != null)
-      res.status(500).send(error);
+    if(error) 
+      res.status(500).send({message: error.stack});
 
     res.setHeader('Content-Type', 'application/pdf');
     res.setHeader('Content-Disposition', 'attachment; filename=invoice.pdf');
