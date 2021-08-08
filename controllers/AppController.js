@@ -1,10 +1,10 @@
 const pdf = require('html-pdf');
 
 const options = {
-  format: "A3",
+  format: "A4",
   orientation: "portrait",
   border: "10mm",
-  "zoomFactor": "1",
+  "zoomFactor": "0.5",
 };
 
 exports.convertToPdf = (req, res) => {
