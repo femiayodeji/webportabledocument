@@ -1,4 +1,5 @@
 const pdf = require('html-pdf');
+
 const options = {
   format: "A4",
   orientation: "portrait",
@@ -6,7 +7,11 @@ const options = {
 };
 
 exports.convertToPdf = (req, res) => {
-  const base64String = req.body.base64String;
+  const requestModel = req.body;
+  if(requestModel.htmlBase64String == null)
+    res.status(400).send({message: "The html base64 string is required"});
+
+  const base64String = requestModel.htmlBase64String;
   const htmlBuffer = Buffer.from(base64String, 'base64'); // Ta-da
 
   const html = htmlBuffer.toString();
