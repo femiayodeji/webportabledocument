@@ -1,7 +1,7 @@
 {
   "name": "webportabledocument",
   "version": "1.0.0",
-  "description": "html to pdf",
+  "description": "convert html to portable document",
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
