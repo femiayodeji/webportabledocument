@@ -3,7 +3,7 @@ const pdf = require('html-pdf');
 const options = {
   format: "A4",
   orientation: "portrait",
-  border: "10mm",
+  border: "5mm",
 };
 
 exports.convertToPdf = (req, res) => {
